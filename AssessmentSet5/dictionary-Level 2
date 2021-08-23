@@ -1,3 +1,17 @@
+Write a python function, find_correct() which accepts a dictionary and returns a list as per the rules mentioned below.
+The input dictionary will contain correct spelling of a word as key and the spelling provided by a contestant as the value.
+
+The function should identify the degree of correctness as mentioned below:
+CORRECT, if it is an exact match
+ALMOST CORRECT, if no more than 2 letters are wrong
+WRONG, if more than 2 letters are wrong or if length (correct spelling versus spelling given by contestant) mismatches.
+
+and return a list containing the number of CORRECT answers, number of ALMOST CORRECT answers and number of WRONG answers. 
+Assume that the words contain only uppercase letters and the maximum word length is 10.
+
+
+
+
 def find_correct(word_dict):
     c1,c2,c3,count=0,0,0,0
     for i in word_dict:
