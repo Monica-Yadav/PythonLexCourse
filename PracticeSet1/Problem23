@@ -1,0 +1,24 @@
+Write a python function to find out whether a number is divisible by the sum of its digits. If so return True,else return False.
+
+
+def divisible_by_sum(number):
+    #start writing your code here
+    temp = number
+ 
+    # Find sum of digits
+    sum = 0;
+    while (number):
+     
+        k = number % 10
+        sum += k
+        number //= 10
+     
+    # check if sum of digits divides number
+    if (temp % sum == 0):
+        return True;
+ 
+    return False
+
+    
+number=42
+print(divisible_by_sum(number))
