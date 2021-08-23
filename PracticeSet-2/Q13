@@ -1,0 +1,30 @@
+'''
+Created on Aug 23, 2021
+
+@author: Monica
+Write a python function which accepts three numbers and returns True if
+
+a. one of the three numbers is "close" to any one of the other numbers (differing from a number by at most 1), and
+
+b.Number that is left out is "far", differing from both other values by 2 or more.
+
+Return false if the above mentioned conditions are not satisfied.
+'''
+def close_number(num1,num2,num3):
+    #start writing your code here
+    list=[]
+    cou=0
+    list.append(num1-num2)
+    list.append(num1-num3)
+    list.append(num2-num1)
+    list.append(num2-num3)
+    list.append(num3-num1)
+    list.append(num3-num2)
+    print(list)
+    for i in list:
+        if abs(i)==1 or i==0:
+            cou=cou+1
+    if(cou==2):
+        return True
+    return False
+print(close_number(9,6,6))
