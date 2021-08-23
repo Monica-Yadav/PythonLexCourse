@@ -1,0 +1,26 @@
+'''
+Created on Aug 23, 2021
+
+@author: Monica
+
+Given a list of integers and a number. Write a python function 
+to find and return the sum of the elements of the list. 
+Note: Don't add the given number and 
+also the numbers present before and 
+after the given number in the list.
+'''
+def sum_of_elements(num_list,number):
+    result_sum  = 0
+
+    for i in range(len(num_list)):
+        t = num_list[max(0, i-1):i+2]
+        if not any(n == number for n in t):
+            result_sum += num_list[i]
+
+            print(result_sum) 
+            
+    return result_sum
+      
+num_list=[1,7,3,4,1,7,10,5]
+number=7
+print(sum_of_elements(num_list, number))
