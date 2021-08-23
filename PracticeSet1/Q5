@@ -1,0 +1,25 @@
+Write a python function which accepts a sentence and finds the number of letters and digits in the sentence.
+
+It should return a list in which the first value should be letter count and second value should be digit count. Ignore the spaces or any other special character in the sentence.
+
+
+def count_digits_letters(sentence):
+    co=0
+    coun=0
+    result_list=[]
+    sentence=sentence.replace(" ","")
+    sentence=sentence.replace(";","")
+    sentence=sentence.replace("-","")
+    for i in sentence:
+        if (i.isdigit()):
+            co+=1
+        else:
+            coun+=1
+    result_list.append(coun)
+    result_list.append(co)
+
+    
+    return result_list
+
+sentence="Infosys Mysore 570027"
+print(count_digits_letters(sentence))
